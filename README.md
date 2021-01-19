@@ -8,5 +8,7 @@ Utility for converting textual time periods to time units (milliseconds, seconds
 
 This is not intended to be as accurate as the official [to-time](https://www.npmjs.com/package/to-time) package is, as this is for generic use cases. Use the official branch if that is what you are after.
 
+*UNIT TESTS WERE NOT CARRIED OUT BEFORE UPLOADING*
+
 ## License
 MIT
