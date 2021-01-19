@@ -1,5 +1,9 @@
-# to-time
+# to-time [FORK]
 [![Build Status](https://travis-ci.org/hafuta/to-time.svg?branch=master)](https://travis-ci.org/hafuta/to-time) [![npm version](https://badge.fury.io/js/to-time.svg)](https://badge.fury.io/js/to-time)
+
+***DISCLAIMER***
+> This is a forked version of the repository to help with the development of another project.
+> Month units are added, however they are not accurate. Instead they are the mean length of the month according to the Gregorian Calendar, which is `30.436875` days.
 
 Utility for converting textual time periods to time units (milliseconds, seconds, minutes, hours, etc..).
 
