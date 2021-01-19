@@ -7,6 +7,7 @@ const constants = require('./constants');
 
 const units = {};
 units.y = units.year = units.years = constants.SECONDS_IN_YEAR;
+units.mo = units.month = units.months = constants.SECONDS_IN_MONTH;
 units.w = units.week = units.weeks = constants.SECONDS_IN_WEEK;
 units.d = units.day = units.days = constants.SECONDS_IN_DAY;
 units.h = units.hour = units.hours = constants.SECONDS_IN_HOUR;
@@ -86,6 +87,10 @@ toTime.fromDays = (days) => {
 
 toTime.fromWeeks = (weeks) => {
     return new TimeFrame(weeks * constants.SECONDS_IN_WEEK);
+};
+
+toTime.fromMonths = (months) => {
+    return new TimeFrame(months * constants.SECONDS_IN_MONTH);
 };
 
 toTime.fromYears = (years) => {

@@ -5,12 +5,13 @@ const constants = require('./constants');
 
 const transforms = [
     ['Years', constants.SECONDS_IN_YEAR],
+    ['Months', constants.SECONDS_IN_MONTH],
     ['Weeks', constants.SECONDS_IN_WEEK],
     ['Days', constants.SECONDS_IN_DAY],
     ['Hours', constants.SECONDS_IN_HOUR],
     ['Minutes', constants.SECONDS_IN_MINUTE],
     ['Seconds', constants.ONE_SECOND],
-    ['Milliseconds', constants.SECONDS_IN_MILLISECOND]
+    ['Milliseconds', constants.SECONDS_IN_MILLISECOND],
 ];
 
 class TimeFrame {
@@ -27,6 +28,7 @@ class TimeFrame {
         this.hour = this.hours.bind(this);
         this.day = this.days.bind(this);
         this.week = this.weeks.bind(this);
+        this.year = this.months.bind(this);
         this.year = this.years.bind(this);
         this.toString = this.humanize.bind(this);
     }
@@ -53,6 +55,10 @@ class TimeFrame {
 
     weeks() {
         return this.val.dividedBy(constants.SECONDS_IN_WEEK).toNumber();
+    }
+
+    months() {
+        return this.val.dividedBy(constants.SECONDS_IN_MONTH).toNumber();
     }
 
     years() {
@@ -82,6 +88,10 @@ class TimeFrame {
     addWeeks(weeks) {
         this.val = this.val.plus(weeks * constants.SECONDS_IN_WEEK);
         return this;
+    }
+
+    addMonths(months) {
+        this.val = this.val.plus(months * constants.SECONDS_IN_MONTH);
     }
 
     addYears(years) {
