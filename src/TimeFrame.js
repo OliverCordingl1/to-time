@@ -28,7 +28,7 @@ class TimeFrame {
         this.hour = this.hours.bind(this);
         this.day = this.days.bind(this);
         this.week = this.weeks.bind(this);
-        this.year = this.months.bind(this);
+        this.month = this.months.bind(this);
         this.year = this.years.bind(this);
         this.toString = this.humanize.bind(this);
     }
